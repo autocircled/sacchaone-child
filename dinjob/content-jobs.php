@@ -12,7 +12,7 @@
  */
 
 // @codingStandardsIgnoreStart
-global $is_job_valid;
+
 // Company name with link
 $company_array = get_the_terms($post->ID, 'company');
 $company_url = '';
@@ -38,13 +38,7 @@ if ($job_locations) {
 }
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>" data-href="<?php echo esc_url(get_permalink()); ?>">
-<?php
-$entry_header_classes = '';
-
-
-$company_image = get_the_post_thumbnail_url(null, 'post-thumbnails');
-?>
+<article <?php post_class('archive-job-item'); ?> id="post-<?php the_ID(); ?>" data-href="<?php echo esc_url(get_permalink()); ?>">
 
     <header class="entry-header">
 
